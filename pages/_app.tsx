@@ -6,26 +6,20 @@ import { NextUIProvider } from "@nextui-org/react";
 import {ThemeProvider as NextThemesProvider} from "next-themes";
 import { useState, useContext } from "react";
 import ChainContext from "../context/Chain";
-import { Ethereum, Polygon, Avalanche } from "@thirdweb-dev/chains";
+import { Ethereum, Polygon, Avalanche,Binance } from "@thirdweb-dev/chains";
 import { useRouter } from "next/router";
 import "../styles/globals.css";
 
-// This is the chain your dApp will work on.
-// Change this to the chain your app is built for.
-// You can also import additional chains from `@thirdweb-dev/chains` and pass them directly.
-
-
 function MyApp({ Component, pageProps }: AppProps) {
-  const [selectedChain, setSelectedChain] = useState("polygon");
-  const activeChain = selectedChain;
+  const [selectedChain, setSelectedChain] = useState("ethereum");
   return (
     <ChainContext.Provider value={{ selectedChain, setSelectedChain }}>
     <NextUIProvider>
       <NextThemesProvider attribute="class" defaultTheme="dark">
     <ThirdwebProvider
 clientId={process.env.NEXT_PUBLIC_TEMPLATE_CLIENT_ID}
-     activeChain={Ethereum}
-      supportedChains={[Ethereum, Polygon, Avalanche]}
+activeChain={selectedChain}
+      supportedChains={[Ethereum, Polygon, Avalanche, Binance]}
       supportedWallets={[
         metamaskWallet(),
         coinbaseWallet(),

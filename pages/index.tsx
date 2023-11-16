@@ -106,17 +106,8 @@ const Home: NextPage = () => {
     <ConnectWallet
         theme={theme as ("light" | "dark" | undefined)}
         modalTitle={"Connect"}
-        modalSize={"wide"}
-        welcomeScreen={{
-          title:
-            "Your gateway to a safe  decentralized world of   Secured Web3 Solutions ",
-          img: {
-            src: "",
-            width: 150,
-            height: 150,
-          },
-        }}
-        modalTitleIconUrl={""}
+        modalSize={"compact"}
+       
       />
       </div>
       <br></br><br></br>

@@ -11,6 +11,7 @@
     "deploy": "next build && next export && npx thirdweb@latest upload out"
   },
   "dependencies": {
+    "@axelar-network/axelarjs-sdk": "^0.13.6",
     "@fortawesome/fontawesome-svg-core": "^6.4.2",
     "@fortawesome/free-brands-svg-icons": "^6.4.2",
     "@fortawesome/free-regular-svg-icons": "^6.4.2",
@@ -20,6 +21,10 @@
     "@openzeppelin/contracts": "^4.9.3",
     "@thirdweb-dev/react": "^3",
     "@thirdweb-dev/sdk": "^3.10.67",
+    "@uniswap/permit2-sdk": "^1.2.0",
+    "@uniswap/sdk-core": "^4.0.9",
+    "@uniswap/smart-order-router": "^3.17.2",
+    "@uniswap/v3-sdk": "^3.10.0",
     "erc-20-abi": "^1.0.0",
     "ethereum-multicall": "^2.21.0",
     "ethers": "^5",
